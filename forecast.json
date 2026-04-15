@@ -5,8 +5,8 @@
     "client": "Chiesi UK \u2014 Respiratory Portfolio",
     "scope": "UK \u00b7 4 SKUs \u00b7 5 Regions \u00b7 13-week horizon",
     "models": "XGBoost + Holt-Winters + ARIMA + Prophet + FVA",
-    "ensemble_accuracy_pct": NaN,
-    "fva_lift_pp": NaN
+    "ensemble_accuracy_pct": 85.7,
+    "fva_lift_pp": 2.2
   },
   "model_info": {
     "models": {
@@ -19,7 +19,7 @@
       },
       "holt_winters": {
         "name": "Holt-Winters Additive Exponential Smoothing",
-        "accuracy": NaN,
+        "accuracy": 83.1,
         "weight_high_conf": 0.25,
         "description": "Statistical baseline. Captures trend and 52-week NHS prescribing seasonality."
       },
@@ -42,9 +42,9 @@
       }
     },
     "ensemble": {
-      "accuracy_pct": NaN,
+      "accuracy_pct": 85.7,
       "naive_accuracy_pct": 95.7,
-      "fva_lift_pp": NaN,
+      "fva_lift_pp": 2.2,
       "blend_logic": "Confidence-weighted: high\u226585%(45/25/20/10) \u00b7 medium\u226578%(30/30/25/15) \u00b7 low<78%(20/35/30/15)"
     },
     "training": {
@@ -63,53 +63,53 @@
       "sku": "Trimbow 87/5/9mcg",
       "naive_accuracy_pct": 95.3,
       "arima_accuracy_pct": 93.5,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "prophet_accuracy_pct": 82.6,
       "xgb_accuracy_pct": 87.1,
-      "ensemble_accuracy_pct": NaN,
-      "fva_vs_naive_pp": NaN,
-      "fva_vs_arima_pp": NaN,
-      "fva_vs_hw_pp": NaN,
-      "lift_label": "+nanpp vs na\u00efve baseline"
+      "ensemble_accuracy_pct": 86.7,
+      "fva_vs_naive_pp": 10.1,
+      "fva_vs_arima_pp": -6.8,
+      "fva_vs_hw_pp": 3.6,
+      "lift_label": "+10.1pp vs na\u00efve baseline"
     },
     {
       "sku": "Fostair 100/6mcg",
       "naive_accuracy_pct": 93.5,
       "arima_accuracy_pct": 69.8,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "prophet_accuracy_pct": 64.6,
       "xgb_accuracy_pct": 87.1,
-      "ensemble_accuracy_pct": NaN,
-      "fva_vs_naive_pp": NaN,
-      "fva_vs_arima_pp": NaN,
-      "fva_vs_hw_pp": NaN,
-      "lift_label": "+nanpp vs na\u00efve baseline"
+      "ensemble_accuracy_pct": 83.2,
+      "fva_vs_naive_pp": 0.8,
+      "fva_vs_arima_pp": 13.4,
+      "fva_vs_hw_pp": 0.1,
+      "lift_label": "+0.8pp vs na\u00efve baseline"
     },
     {
       "sku": "Clenil Modulite 100mcg",
       "naive_accuracy_pct": 96.7,
       "arima_accuracy_pct": 96.0,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "prophet_accuracy_pct": 88.0,
       "xgb_accuracy_pct": 87.1,
-      "ensemble_accuracy_pct": NaN,
-      "fva_vs_naive_pp": NaN,
-      "fva_vs_arima_pp": NaN,
-      "fva_vs_hw_pp": NaN,
-      "lift_label": "+nanpp vs na\u00efve baseline"
+      "ensemble_accuracy_pct": 88.0,
+      "fva_vs_naive_pp": 0.7,
+      "fva_vs_arima_pp": -8.0,
+      "fva_vs_hw_pp": 4.9,
+      "lift_label": "+0.7pp vs na\u00efve baseline"
     },
     {
       "sku": "Atimos Modulite 12mcg",
       "naive_accuracy_pct": 97.3,
       "arima_accuracy_pct": 93.3,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "prophet_accuracy_pct": 96.9,
       "xgb_accuracy_pct": 87.1,
-      "ensemble_accuracy_pct": NaN,
-      "fva_vs_naive_pp": NaN,
-      "fva_vs_arima_pp": NaN,
-      "fva_vs_hw_pp": NaN,
-      "lift_label": "+nanpp vs na\u00efve baseline"
+      "ensemble_accuracy_pct": 88.8,
+      "fva_vs_naive_pp": 0.9,
+      "fva_vs_arima_pp": -4.5,
+      "fva_vs_hw_pp": 5.7,
+      "lift_label": "+0.9pp vs na\u00efve baseline"
     }
   ],
   "fva_weekly": [
@@ -339,13 +339,13 @@
       "revenue_13w_gbp": 82562456,
       "avg_confidence_pct": 83.5,
       "weeks_cover": 3.2,
-      "ensemble_accuracy_pct": NaN,
+      "ensemble_accuracy_pct": 86.7,
       "xgb_accuracy_pct": 87.1,
       "arima_accuracy_pct": 93.5,
       "prophet_accuracy_pct": 82.6,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "naive_accuracy_pct": 95.3,
-      "fva_lift_pp": NaN,
+      "fva_lift_pp": 10.1,
       "mape_pct": 12.4,
       "bias_pct": 11.1,
       "bias_direction": "over"
@@ -358,13 +358,13 @@
       "revenue_13w_gbp": 81818161,
       "avg_confidence_pct": 83.5,
       "weeks_cover": 6.8,
-      "ensemble_accuracy_pct": NaN,
+      "ensemble_accuracy_pct": 83.2,
       "xgb_accuracy_pct": 87.1,
       "arima_accuracy_pct": 69.8,
       "prophet_accuracy_pct": 64.6,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "naive_accuracy_pct": 93.5,
-      "fva_lift_pp": NaN,
+      "fva_lift_pp": 0.8,
       "mape_pct": 20.0,
       "bias_pct": 17.9,
       "bias_direction": "over"
@@ -377,13 +377,13 @@
       "revenue_13w_gbp": 22673565,
       "avg_confidence_pct": 83.5,
       "weeks_cover": 14.1,
-      "ensemble_accuracy_pct": NaN,
+      "ensemble_accuracy_pct": 88.0,
       "xgb_accuracy_pct": 87.1,
       "arima_accuracy_pct": 96.0,
       "prophet_accuracy_pct": 88.0,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "naive_accuracy_pct": 96.7,
-      "fva_lift_pp": NaN,
+      "fva_lift_pp": 0.7,
       "mape_pct": 12.3,
       "bias_pct": 11.0,
       "bias_direction": "over"
@@ -396,13 +396,13 @@
       "revenue_13w_gbp": 30196681,
       "avg_confidence_pct": 83.5,
       "weeks_cover": 5.4,
-      "ensemble_accuracy_pct": NaN,
+      "ensemble_accuracy_pct": 88.8,
       "xgb_accuracy_pct": 87.1,
       "arima_accuracy_pct": 93.3,
       "prophet_accuracy_pct": 96.9,
-      "hw_accuracy_pct": NaN,
+      "hw_accuracy_pct": 83.1,
       "naive_accuracy_pct": 97.3,
-      "fva_lift_pp": NaN,
+      "fva_lift_pp": 0.9,
       "mape_pct": 6.9,
       "bias_pct": 3.1,
       "bias_direction": "over"
