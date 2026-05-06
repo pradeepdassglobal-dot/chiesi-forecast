@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-01T12:19:15.017431Z",
+    "generated_at": "2026-05-06T03:35:05.385743Z",
     "client": "Chiesi Limited UK",
     "scope": "Respiratory UK \u2014 PoC dataset (Daniel's sample, 3 SKUs)",
     "history_period": {
@@ -15,16 +15,24 @@
       "start": "2026-04-01",
       "end": "2028-03-01"
     },
-    "engine": "Sapnity Forecast Engine v1.0",
+    "engine": "Sapnity Forecast Engine v3 FINAL \u2014 7-model tournament",
     "models_evaluated": [
       "Naive Seasonal",
       "Holt-Winters",
       "SARIMA",
       "Theta",
-      "XGBoost"
+      "XGBoost",
+      "LightGBM",
+      "Random Forest"
     ],
     "primary_metric": "WAPE",
-    "metric_notes": "WAPE (Weighted Absolute Percentage Error) is used as the universal accuracy metric. MAPE is reported alongside for SKUs where it is defined."
+    "metric_notes": "WAPE (Weighted Absolute Percentage Error) is used as the universal accuracy metric. MAPE is reported alongside for SKUs where it is defined.",
+    "expected_skus": [
+      "FOSTAIR",
+      "NEXTHALER",
+      "KENGREXAL"
+    ],
+    "tournament_model_count": 7
   },
   "skus": [
     {
@@ -42,14 +50,19 @@
           "mape": 9.09
         },
         {
-          "model": "Holt-Winters",
-          "wape": 8.73,
-          "mape": 9.09
+          "model": "LightGBM",
+          "wape": 9.2,
+          "mape": 9.23
         },
         {
-          "model": "SARIMA",
-          "wape": 8.73,
-          "mape": 9.09
+          "model": "Random Forest",
+          "wape": 9.96,
+          "mape": 10.25
+        },
+        {
+          "model": "XGBoost",
+          "wape": 10.07,
+          "mape": 10.26
         },
         {
           "model": "Theta",
@@ -57,9 +70,14 @@
           "mape": 10.23
         },
         {
-          "model": "XGBoost",
-          "wape": 10.73,
-          "mape": 10.78
+          "model": "Holt-Winters",
+          "wape": 13.29,
+          "mape": 12.69
+        },
+        {
+          "model": "SARIMA",
+          "wape": 30.37,
+          "mape": 30.78
         }
       ],
       "winner": "Naive Seasonal",
@@ -390,13 +408,23 @@
         },
         {
           "model": "Holt-Winters",
-          "wape": 71.65,
-          "mape": 75.23
+          "wape": 73.84,
+          "mape": 96.72
         },
         {
-          "model": "SARIMA",
-          "wape": 71.65,
-          "mape": 75.23
+          "model": "Random Forest",
+          "wape": 77.05,
+          "mape": 92.0
+        },
+        {
+          "model": "XGBoost",
+          "wape": 78.01,
+          "mape": 106.07
+        },
+        {
+          "model": "LightGBM",
+          "wape": 78.92,
+          "mape": 118.01
         },
         {
           "model": "Theta",
@@ -404,9 +432,9 @@
           "mape": 114.16
         },
         {
-          "model": "XGBoost",
-          "wape": 71.68,
-          "mape": 90.43
+          "model": "SARIMA",
+          "wape": 91.27,
+          "mape": 102.96
         }
       ],
       "winner": "Naive Seasonal",
@@ -731,19 +759,24 @@
       },
       "tournament": [
         {
-          "model": "Naive Seasonal",
-          "wape": 14.63,
-          "mape": 14.55
+          "model": "LightGBM",
+          "wape": 8.77,
+          "mape": 9.28
         },
         {
           "model": "Holt-Winters",
-          "wape": 14.63,
-          "mape": 14.55
+          "wape": 8.89,
+          "mape": 9.51
         },
         {
-          "model": "SARIMA",
-          "wape": 14.63,
-          "mape": 14.55
+          "model": "XGBoost",
+          "wape": 9.04,
+          "mape": 9.6
+        },
+        {
+          "model": "Random Forest",
+          "wape": 9.49,
+          "mape": 10.04
         },
         {
           "model": "Theta",
@@ -751,17 +784,22 @@
           "mape": 10.4
         },
         {
-          "model": "XGBoost",
-          "wape": 8.35,
-          "mape": 9.04
+          "model": "SARIMA",
+          "wape": 13.38,
+          "mape": 14.28
+        },
+        {
+          "model": "Naive Seasonal",
+          "wape": 14.63,
+          "mape": 14.55
         }
       ],
-      "winner": "XGBoost",
+      "winner": "LightGBM",
       "metrics": {
-        "walk_forward_wape": 8.35,
-        "walk_forward_mape": 9.04,
-        "holdout_q4_2025_wape": 8.81,
-        "holdout_q4_2025_mape": 8.75
+        "walk_forward_wape": 8.77,
+        "walk_forward_mape": 9.28,
+        "holdout_q4_2025_wape": 8.47,
+        "holdout_q4_2025_mape": 8.47
       },
       "history": [
         {
@@ -924,153 +962,153 @@
       "forecast": [
         {
           "date": "2026-04-01",
-          "value": 211136.7,
-          "lower": 179466.2,
-          "upper": 242807.21
+          "value": 189383.16,
+          "lower": 160975.68,
+          "upper": 217790.63
         },
         {
           "date": "2026-05-01",
-          "value": 223586.05,
-          "lower": 190048.14,
-          "upper": 257123.95
+          "value": 219202.57,
+          "lower": 186322.19,
+          "upper": 252082.96
         },
         {
           "date": "2026-06-01",
-          "value": 201408.39,
-          "lower": 171197.13,
-          "upper": 231619.65
+          "value": 210492.27,
+          "lower": 178918.43,
+          "upper": 242066.12
         },
         {
           "date": "2026-07-01",
-          "value": 224811.91,
-          "lower": 191090.12,
-          "upper": 258533.69
+          "value": 230141.14,
+          "lower": 195619.97,
+          "upper": 264662.31
         },
         {
           "date": "2026-08-01",
-          "value": 214413.39,
-          "lower": 182251.38,
-          "upper": 246575.4
+          "value": 203631.87,
+          "lower": 173087.09,
+          "upper": 234176.65
         },
         {
           "date": "2026-09-01",
-          "value": 224531.97,
-          "lower": 190852.17,
-          "upper": 258211.76
+          "value": 221609.56,
+          "lower": 188368.12,
+          "upper": 254850.99
         },
         {
           "date": "2026-10-01",
-          "value": 225402.75,
-          "lower": 191592.34,
-          "upper": 259213.16
+          "value": 202209.55,
+          "lower": 171878.12,
+          "upper": 232540.98
         },
         {
           "date": "2026-11-01",
-          "value": 223549.05,
-          "lower": 190016.69,
-          "upper": 257081.4
+          "value": 215085.97,
+          "lower": 182823.08,
+          "upper": 247348.87
         },
         {
           "date": "2026-12-01",
-          "value": 224669.16,
-          "lower": 190968.78,
-          "upper": 258369.53
+          "value": 218789.85,
+          "lower": 185971.37,
+          "upper": 251608.33
         },
         {
           "date": "2027-01-01",
-          "value": 224679.91,
-          "lower": 190977.92,
-          "upper": 258381.89
+          "value": 216421.55,
+          "lower": 183958.32,
+          "upper": 248884.79
         },
         {
           "date": "2027-02-01",
-          "value": 224708.88,
-          "lower": 191002.54,
-          "upper": 258415.21
+          "value": 219488.01,
+          "lower": 186564.81,
+          "upper": 252411.21
         },
         {
           "date": "2027-03-01",
-          "value": 224662.72,
-          "lower": 190963.31,
-          "upper": 258362.13
+          "value": 217275.41,
+          "lower": 184684.1,
+          "upper": 249866.72
         },
         {
           "date": "2027-04-01",
-          "value": 224678.08,
-          "lower": 190976.37,
-          "upper": 258379.79
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2027-05-01",
-          "value": 224455.02,
-          "lower": 190786.76,
-          "upper": 258123.27
+          "value": 219488.01,
+          "lower": 186564.81,
+          "upper": 252411.21
         },
         {
           "date": "2027-06-01",
-          "value": 211696.97,
-          "lower": 179942.42,
-          "upper": 243451.51
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2027-07-01",
-          "value": 224678.08,
-          "lower": 190976.37,
-          "upper": 258379.79
+          "value": 219488.01,
+          "lower": 186564.81,
+          "upper": 252411.21
         },
         {
           "date": "2027-08-01",
-          "value": 224502.81,
-          "lower": 190827.39,
-          "upper": 258178.23
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2027-09-01",
-          "value": 224602.75,
-          "lower": 190912.34,
-          "upper": 258293.16
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2027-10-01",
-          "value": 224511.55,
-          "lower": 190834.81,
-          "upper": 258188.28
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2027-11-01",
-          "value": 224502.81,
-          "lower": 190827.39,
-          "upper": 258178.23
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2027-12-01",
-          "value": 224455.02,
-          "lower": 190786.76,
-          "upper": 258123.27
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2028-01-01",
-          "value": 224502.81,
-          "lower": 190827.39,
-          "upper": 258178.23
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2028-02-01",
-          "value": 224678.08,
-          "lower": 190976.37,
-          "upper": 258379.79
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         },
         {
           "date": "2028-03-01",
-          "value": 224502.81,
-          "lower": 190827.39,
-          "upper": 258178.23
+          "value": 219165.46,
+          "lower": 186290.64,
+          "upper": 252040.28
         }
       ]
     }
   ],
   "drift_monitor": {
-    "last_refit": "2026-05-01",
+    "last_refit": "2026-05-06",
     "next_refit_due": "2026-08-01",
     "drift_status": "Stable",
     "trigger_thresholds": {
@@ -1123,5 +1161,147 @@
       "duration": "Year 2",
       "scope": "Full UK SKU portfolio, EU expansion, SAP writeback, Copilot interface"
     }
-  ]
+  ],
+  "fva_summary": {
+    "primary_metric": "WAPE",
+    "generated_at": "2026-05-06T03:35:05.448589Z",
+    "portfolio_weighted_wape": 8.74,
+    "method": "FVA compares the selected tournament winner against Naive Seasonal and the best classical/statistical model using WAPE percentage-point lift.",
+    "sku_level": [
+      {
+        "sku_id": "FOSTAIR",
+        "classification": "Smooth",
+        "winner": "Naive Seasonal",
+        "winner_wape": 8.73,
+        "naive_wape": 8.73,
+        "best_classical_model": "Naive Seasonal",
+        "best_classical_wape": 8.73,
+        "best_ml_model": "LightGBM",
+        "best_ml_wape": 9.2,
+        "fva_vs_naive_pp": 0.0,
+        "fva_vs_best_classical_pp": 0.0,
+        "ml_lift_vs_best_classical_pp": -0.47,
+        "confidence_flag": "Normal"
+      },
+      {
+        "sku_id": "KENGREXAL",
+        "classification": "Erratic",
+        "winner": "Naive Seasonal",
+        "winner_wape": 71.65,
+        "naive_wape": 71.65,
+        "best_classical_model": "Naive Seasonal",
+        "best_classical_wape": 71.65,
+        "best_ml_model": "Random Forest",
+        "best_ml_wape": 77.05,
+        "fva_vs_naive_pp": 0.0,
+        "fva_vs_best_classical_pp": 0.0,
+        "ml_lift_vs_best_classical_pp": -5.4,
+        "confidence_flag": "Low confidence \u2014 historical signal not stable enough for automated replenishment"
+      },
+      {
+        "sku_id": "NEXTHALER",
+        "classification": "Smooth",
+        "winner": "LightGBM",
+        "winner_wape": 8.77,
+        "naive_wape": 14.63,
+        "best_classical_model": "Holt-Winters",
+        "best_classical_wape": 8.89,
+        "best_ml_model": "LightGBM",
+        "best_ml_wape": 8.77,
+        "fva_vs_naive_pp": 5.86,
+        "fva_vs_best_classical_pp": 0.12,
+        "ml_lift_vs_best_classical_pp": 0.12,
+        "confidence_flag": "Normal"
+      }
+    ]
+  },
+  "forecast_signals": {
+    "forecastable_sku_count": 2,
+    "exception_sku_count": 1,
+    "best_lift_sku": "NEXTHALER",
+    "best_lift_pp": 0.12,
+    "message": "Forecast engine separates forecastable SKUs from exception-led SKUs. Smooth SKUs can be forecasted using tournament winners, while erratic SKUs require business review and external drivers."
+  },
+  "validation_diagnostics": {
+    "generated_at": "2026-05-06T03:35:05.449602Z",
+    "expected_model_count": 7,
+    "diagnostics": [
+      {
+        "sku_id": "FOSTAIR",
+        "tournament_model_count": 7,
+        "models_present": [
+          "Naive Seasonal",
+          "LightGBM",
+          "Random Forest",
+          "XGBoost",
+          "Theta",
+          "Holt-Winters",
+          "SARIMA"
+        ],
+        "winner": "Naive Seasonal",
+        "winner_wape": 8.73,
+        "checks": {
+          "has_7_models": true,
+          "has_lightgbm": true,
+          "has_random_forest": true,
+          "winner_matches_lowest_wape": true,
+          "has_history": true,
+          "has_forecast": true,
+          "has_holdout_metrics": true
+        },
+        "status": "PASS"
+      },
+      {
+        "sku_id": "KENGREXAL",
+        "tournament_model_count": 7,
+        "models_present": [
+          "Naive Seasonal",
+          "Holt-Winters",
+          "Random Forest",
+          "XGBoost",
+          "LightGBM",
+          "Theta",
+          "SARIMA"
+        ],
+        "winner": "Naive Seasonal",
+        "winner_wape": 71.65,
+        "checks": {
+          "has_7_models": true,
+          "has_lightgbm": true,
+          "has_random_forest": true,
+          "winner_matches_lowest_wape": true,
+          "has_history": true,
+          "has_forecast": true,
+          "has_holdout_metrics": true
+        },
+        "status": "PASS"
+      },
+      {
+        "sku_id": "NEXTHALER",
+        "tournament_model_count": 7,
+        "models_present": [
+          "LightGBM",
+          "Holt-Winters",
+          "XGBoost",
+          "Random Forest",
+          "Theta",
+          "SARIMA",
+          "Naive Seasonal"
+        ],
+        "winner": "LightGBM",
+        "winner_wape": 8.77,
+        "checks": {
+          "has_7_models": true,
+          "has_lightgbm": true,
+          "has_random_forest": true,
+          "winner_matches_lowest_wape": true,
+          "has_history": true,
+          "has_forecast": true,
+          "has_holdout_metrics": true
+        },
+        "status": "PASS"
+      }
+    ],
+    "overall_status": "PASS"
+  }
 }
