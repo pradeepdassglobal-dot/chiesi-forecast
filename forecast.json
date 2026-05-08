@@ -29,7 +29,7 @@
     ],
     "primary_metric": "WAPE",
     "chiesi_kpi": "MAPE3",
-    "metric_notes": "WAPE (Weighted Absolute Percentage Error) is the platform's universal accuracy metric, used for winner selection. MAPE is reported alongside as a traditional reference. MAPE3 (3-month-forward MAPE) is reported per Chiesi UK's primary KPI as confirmed by Daniel.",
+    "metric_notes": "WAPE (Weighted Absolute Percentage Error) is the platform's universal accuracy metric, used for adaptive strategy selection. MAPE is reported alongside as a traditional reference. MAPE3 (3-month-forward MAPE) is reported per Chiesi UK's primary KPI.",
     "expected_skus": [
       "FOSTAIR",
       "NEXTHALER",
