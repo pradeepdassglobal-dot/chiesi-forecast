@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-05-06T09:59:34.778715Z",
+    "generated_at": "2026-05-08T01:57:58.087309Z",
     "client": "Chiesi Limited UK",
     "scope": "Respiratory UK \u2014 PoC dataset (Daniel's sample, 3 SKUs)",
     "data_granularity": "SKU x Location ID",
@@ -95,9 +95,9 @@
         "walk_forward_wape": 8.73,
         "walk_forward_mape": 9.09,
         "walk_forward_mape3": 9.64,
-        "holdout_q4_2025_wape": 14.3,
-        "holdout_q4_2025_mape": 14.29,
-        "holdout_q4_2025_mape3": 14.29
+        "holdout_q4_2025_wape": 8.03,
+        "holdout_q4_2025_mape": 8.25,
+        "holdout_q4_2025_mape3": 8.25
       },
       "history": [
         {
@@ -461,9 +461,9 @@
         "walk_forward_wape": 71.65,
         "walk_forward_mape": 75.23,
         "walk_forward_mape3": 77.13,
-        "holdout_q4_2025_wape": 54.29,
-        "holdout_q4_2025_mape": 46.39,
-        "holdout_q4_2025_mape3": 46.39
+        "holdout_q4_2025_wape": 92.0,
+        "holdout_q4_2025_mape": 126.85,
+        "holdout_q4_2025_mape3": 126.85
       },
       "history": [
         {
@@ -827,9 +827,9 @@
         "walk_forward_wape": 8.77,
         "walk_forward_mape": 9.28,
         "walk_forward_mape3": 9.09,
-        "holdout_q4_2025_wape": 2.48,
-        "holdout_q4_2025_mape": 2.47,
-        "holdout_q4_2025_mape3": 2.47
+        "holdout_q4_2025_wape": 8.47,
+        "holdout_q4_2025_mape": 8.47,
+        "holdout_q4_2025_mape3": 8.47
       },
       "history": [
         {
@@ -1138,7 +1138,7 @@
     }
   ],
   "drift_monitor": {
-    "last_refit": "2026-05-06",
+    "last_refit": "2026-05-08",
     "next_refit_due": "2026-08-01",
     "drift_status": "Stable",
     "trigger_thresholds": {
