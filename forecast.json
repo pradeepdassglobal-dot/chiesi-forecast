@@ -46,7 +46,7 @@
         "adi": 1.0,
         "cv2": 0.02
       },
-      "tournament": [
+      "adaptive selection": [
         {
           "model": "Naive Seasonal",
           "wape": 8.73,
@@ -412,7 +412,7 @@
         "adi": 1.05,
         "cv2": 0.62
       },
-      "tournament": [
+      "adaptive selection": [
         {
           "model": "Naive Seasonal",
           "wape": 71.65,
@@ -778,7 +778,7 @@
         "adi": 1.0,
         "cv2": 0.04
       },
-      "tournament": [
+      "adaptive selection": [
         {
           "model": "LightGBM",
           "wape": 8.77,
