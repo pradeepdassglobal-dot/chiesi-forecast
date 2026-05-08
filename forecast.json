@@ -17,7 +17,7 @@
       "start": "2026-04-01",
       "end": "2028-03-01"
     },
-    "engine": "Sapnity Forecast Engine v4 \u2014 7-model tournament with MAPE3",
+    "engine": "Sapnity Forecast Engine v4 — adaptive selection across seven validated strategies (MAPE3-led)",
     "models_evaluated": [
       "Naive Seasonal",
       "Holt-Winters",
